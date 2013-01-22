@@ -1,6 +1,6 @@
 % Day 1:  Introduction to Working with Open Data
 % Raymond Yee 
-% January 22, 2013
+% January 22, 2013 (<http://bit.ly/wwod1301>)
 
 # Course Overview
 
@@ -330,7 +330,7 @@ deepening old interests, controlled serendipity.
 * What business models?  
 * What are people doing with open data?
 * What are the different common formats used to represent open data? (e.g., CSV, XML, KML, SHP in data.gov) -- and how can we use Python to process those formats?
-* What are the issues that we face in combining open data with closed data?
+* What are the issues that we face in combining open data with closed data
 
 
 # Related upcoming events in the area
