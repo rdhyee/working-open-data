@@ -5,7 +5,8 @@
 
 # Goals Today
 
-
+  * make sure we have an iPython environment set up for everyone
+  * Work through exercise in census iPython notebook: <https://github.com/rdhyee/working-open-data/blob/master/notebooks/Day_02_class_starter.ipynb>
 
 # Assigned Readings for today
 
@@ -111,6 +112,7 @@ deepening old interests, controlled serendipity.
 
 # Homework
 
+* Submit to <yee@berkeley.edu> by Wednesday, Jan 30 at noon. the iPython notebook.  
 
 
 
