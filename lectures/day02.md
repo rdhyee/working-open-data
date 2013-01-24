@@ -1,6 +1,6 @@
 % Day 2: Review of Python & iPython (Chap 3 and Chap 13)
 % Raymond Yee 
-% January 24, 2013 (<http://bit.ly/wwod1301>)
+% January 24, 2013 (<http://bit.ly/wwod1302>)
 
 
 # Goals Today
