@@ -46,6 +46,10 @@ Reminder: this homework is due *Friday, Feb 8 at noon*.  Submit to <yee@berkeley
 * [notebook_javascript_examples.ipynb](https://raw.github.com/rdhyee/working-open-data/master/notebooks/notebook_javascript_examples.ipynb)
 * [vtk example](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/vtk_example.ipynb)
 
+# Our Discussion document
+
+<http://bit.ly/wwod1305gdoc>
+
 # Reading for next time
 
 * Knight open govt news challenge Feb 12: <http://www.knightfoundation.org/blogs/knightblog/2013/1/30/news-challenge-open-gov-launches-feb-12/>
