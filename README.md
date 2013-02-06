@@ -1,0 +1,1 @@
+This is the github repo for [Working with Open Data](http://www.ischool.berkeley.edu/courses/i290t-wod).
