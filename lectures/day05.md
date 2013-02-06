@@ -42,7 +42,7 @@ Reminder: this homework is due *Friday, Feb 8 at noon*.  Submit to <yee@berkeley
    
 # Notebooks that were demoed in Class
 
-* [Day 5 Plotting examples](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day05_plotting.ipynb)
+* [Day 5 Plotting examples](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_05_plotting.ipynb)
 * [notebook_javascript_examples.ipynb](https://raw.github.com/rdhyee/working-open-data/master/notebooks/notebook_javascript_examples.ipynb)
 * [vtk example](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/vtk_example.ipynb)
 
