@@ -1,4 +1,4 @@
-% Day 7:  Branching out to the Wikipedia, Freebase / Preparing for Courtlistener
+% Day 7:  Preparing for Courtlistener / Branching out to the Wikipedia, Freebase / Projects...
 % Raymond Yee 
 % February 12, 2013 (<http://bit.ly/wwod1307>)
 
@@ -35,12 +35,18 @@ the room quickly introducing the project ideas.**
 * <http://www.knightfoundation.org/blogs/knightblog/2013/2/12/News-Challenge-launches-with-an-OpenIDEO-twist/>
 * Inspiration phase (Feb 12-19): <https://www.newschallenge.org/open/open-government/inspiration/>
 
-# Python assignment
+# Having iPython notebook generate python code for you
 
+[doc for --script](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html#importing-or-executing-a-notebook-as-a-normal-python-file)
 
+e.g., my shell script:
 
-# Homework
+    #!/bin/sh
+    ipython notebook --pylab=inline --script --notebook-dir=/Users/raymondyee/D/Document/Working_with_Open_Data/ &
+    ipython notebook --pylab=inline --script --notebook-dir=/Users/raymondyee/D/Document/Working_with_Open_Data/working-open-data/notebooks/ &
+    ipython notebook --pylab=inline --script --notebook-dir=/Users/raymondyee/D/Document/Working_with_Open_Data/pydata-book/ &
 
-## Next Python HW assignment (HW#3, Day07)
+# Have you ever wondered about different len rows/ array vs matrix mulitiplication
 
-Due date: Friday, Feb 15 Noon
+    * Day_07_array_len_and_multiply.ipynb
+
