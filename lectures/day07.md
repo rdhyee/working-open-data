@@ -16,6 +16,10 @@
 * <http://courtlistener.com/dump-info/>.
 * <http://www.wired.com/threatlevel/2009/10/swartz-fbi/>.
 
+## Discussion in Google Doc
+
+<http://bit.ly/wwod13courtlistener>
+
 # Project Formation Cont'd
 
 From Day 6:
@@ -23,14 +27,20 @@ From Day 6:
 > I would like everyone to fill in at least one Project idea in [Project Ideas/Team Formation gdoc](http://bit.ly/wwod13projideas) and email
 me a link (+description) to that project idea in email to <yee@berkeley.edu> by Monday, Feb 11, 2013 at noon.
 
+**If you've not identified yourself with a specific project within this Google Document, do so in class.  We will spend time going around
+the room quickly introducing the project ideas.**
+
 # Knight News Challenge
 
 * <http://www.knightfoundation.org/blogs/knightblog/2013/2/12/News-Challenge-launches-with-an-OpenIDEO-twist/>
 * Inspiration phase (Feb 12-19): <https://www.newschallenge.org/open/open-government/inspiration/>
 
-# Next Python HW assignment (HW#3, Day07)
+# Python assignment
 
-Due date: Friday, Feb 15 Noon
+
 
 # Homework
 
+## Next Python HW assignment (HW#3, Day07)
+
+Due date: Friday, Feb 15 Noon
