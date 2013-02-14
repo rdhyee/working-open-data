@@ -11,6 +11,10 @@
 
 <http://bit.ly/wwod13courtlistener>
 
+# Brian Carver's Talk
+
+[URL for slides to be filled in]
+
 # Knight News Challenge -- let's see what's happening
 
 * <http://www.knightfoundation.org/blogs/knightblog/2013/2/12/News-Challenge-launches-with-an-OpenIDEO-twist/>
@@ -27,6 +31,15 @@ e.g., my shell script:
     ipython notebook --pylab=inline --script --notebook-dir=/Users/raymondyee/D/Document/Working_with_Open_Data/working-open-data/notebooks/ &
     ipython notebook --pylab=inline --script --notebook-dir=/Users/raymondyee/D/Document/Working_with_Open_Data/pydata-book/ &
 
-# Homework notebooks
+# Homework
 
+## Homework Assignment # 3
 
+Two parts
+
+* [Day 08 Starter Notebook](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_08_starter.ipynb)
+* Get API key for Freebase so that you can run [Day 08 Intro to Freebase API](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_08_freebase_intro.ipynb)
+
+Optional -- take a look at [where will be going with maps](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_08_basemap_globe_example.ipynb)
+
+**Homework Due on Friday, Feb 22 at noon -- send completed Day 08 notebook to <yee@berkeley.edu>.**
