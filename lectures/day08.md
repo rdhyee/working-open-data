@@ -5,7 +5,7 @@
 # Agenda
 
 * Welcome to our guest speaker, [Brian Carver](http://www.ischool.berkeley.edu/people/faculty/briancarver) 
-* Next Python HW assignment (HW#3, Day07)
+* Next Python HW assignment (HW#3, Day08)
 
 ## Discussion in Google Doc about Courtlistener
 
