@@ -1,4 +1,4 @@
-% Day 9:  Recap of Courtlistener, Freebase homework, Parsing of fixed columns
+% Day 9:  Reflection: Courtlistener, Homework, Projects, Knight Challenge
 % Raymond Yee 
 % February 19, 2013 (<http://bit.ly/wwod1309>)
 
