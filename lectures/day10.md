@@ -70,7 +70,7 @@ I really recommend:
 
 # Using requests, lxml, and some simple geocoding example
 
-
+[notebook on requests, lxml, geocoding](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_10_requests_lxml.ipynb)
 
 # Wikipedia
 
