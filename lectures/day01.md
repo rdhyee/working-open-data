@@ -92,14 +92,14 @@ and other data sets still to be determined, probably large open scientific data 
 **Last revised: 2013.02.20**
 
   1. [Day 1: Introduction to Working with Open Data](http://bit.ly/wwod1301)
-  2. Review of Python & iPython (Chap 3 and Chap 13) + setup EPD
-  3. NumPy and Getting started with pandas I (Chap 4, 5)
-  4. Open Government Data I:  US Census data: introduction how to work with
-  5. Plotting and Visualization (Chap 8)
-  6. Data Loading, Storage, and File Formats (Chap 6)
-  7. Wikipedia:  API, data structure
-  8. NumPy and Getting started with pandas II (Chap 4, 5)
-  9. Freebase, dbpedia, wikidata
+  2. [Day 2: Review of Python and iPython (Chap 3 and Chap 13)](http://bit.ly/wwod1302)
+  3. [Day 3: Getting started with pandas and NumPy I](http://bit.ly/wwod1303)
+  4. [Day 4: Getting started with pandas and NumPy II](http://bit.ly/wwod1304)
+  5. [Day 5: Pandas Cont'd / Introduction to Matplotlib / Projects](http://bit.ly/wwod1305)
+  6. [Day 6: Project Brainstorming and Team Formation](http://bit.ly/wwod1306)
+  7. [Day 7: Preparing for Courtlistener / Branching out to the Wikipedia, Freebase / Projects...](http://bit.ly/wwod1307)
+  8. [Day 8: Courtlistener](http://bit.ly/wwod1308)
+  9. [Day 9: Reflection: Courtlistener, Homework, Projects, Knight Challenge](http://bit.ly/wwod1309)
   10. Data Wrangling: Clean, Transform, Merge, Reshape (Chap 7)
   11. working with geodata I
   12. JavaScript-based visualization I
@@ -118,7 +118,18 @@ and other data sets still to be determined, probably large open scientific data 
   25. Advanced NumPy (Ch 12)  
   26. PyData Misc I / Working on Projects  
   27. PyData Misc II / Working on Projects  
-  28. Project Poster Session  
+  28. Project Poster Session
+  
+Old plans:
+
+  2. Review of Python & iPython (Chap 3 and Chap 13) + setup EPD
+  3. NumPy and Getting started with pandas I (Chap 4, 5)
+  4. Open Government Data I:  US Census data: introduction how to work with
+  5. Plotting and Visualization (Chap 8)
+  6. Data Loading, Storage, and File Formats (Chap 6)
+  7. Wikipedia:  API, data structure
+  8. NumPy and Getting started with pandas II (Chap 4, 5)
+  9. Freebase, dbpedia, wikidata
 
 ## To be scheduled:
 
