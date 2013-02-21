@@ -107,8 +107,8 @@ and other data sets still to be determined, probably large open scientific data 
   14. Google Refine
   15. working with geodata II
   16. JavaScript-based visualization II
-  17. ????  
-  18. MIDTERM (Day 18, 2013-03-21)  
+  17. MIDTERM (Day 17, 2013-03-19)  
+  18. ????
   19. Wikipedia II  
   20. Data Aggregation and Group Operations (Ch 9)  
   21. Time Series (Ch 10)  
