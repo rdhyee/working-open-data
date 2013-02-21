@@ -25,7 +25,7 @@ is to work with you to stay on track with the class materials.
 * I clear all the results.
 * I run the notebook.
 
-**Please don't alter the assertions/tests I run in.  If you do, you must highlight the change you made and why.**
+**Please don't alter the assertions/tests I write in.  If you do, you must highlight the change you made and why.**
 
 I allow resubmissions because I want to encourage you to learn the material and because I do want dialog in the
 learning process.

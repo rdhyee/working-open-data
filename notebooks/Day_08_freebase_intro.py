@@ -189,6 +189,6 @@ for result in islice(response['result'], None):
                      } )
     
 states = DataFrame(results)
-#plt.scatter(states["longitude"], states["latitude"])
+plt.scatter(states["longitude"], states["latitude"])
     
 

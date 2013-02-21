@@ -89,9 +89,9 @@ and other data sets still to be determined, probably large open scientific data 
 
 # Course Outline
 
-*Tentative*
+**Last revised: 2013.02.20**
 
-  1. Course Intro Lecture 
+  1. [Day 1: Introduction to Working with Open Data](http://bit.ly/wwod1301)
   2. Review of Python & iPython (Chap 3 and Chap 13) + setup EPD
   3. NumPy and Getting started with pandas I (Chap 4, 5)
   4. Open Government Data I:  US Census data: introduction how to work with
