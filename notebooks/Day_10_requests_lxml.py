@@ -101,3 +101,6 @@ course_tts = doc.cssselect('table:nth-of-type(2) tt')
 
 print course_tts[-1].text_content().replace("Avail Seats", "Avail_Seats").split(" ")[:-1]
 
+# <codecell>
+
+
