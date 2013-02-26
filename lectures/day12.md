@@ -4,6 +4,9 @@
 
 # Agenda
 
+* Harrison Dekker and Tim Dennis of the UC Data Lab (http://www.lib.berkeley.edu/wikis/datalab/ )
+
+
 
 # Announcements
 
