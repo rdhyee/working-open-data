@@ -123,7 +123,7 @@ We'll come back to <http://dbpedia.org/About>.
 # Homework
 
 * Parse
-  [DataDict.txt](https://raw.github.com/rdhyee/working-open-data/5ef3932b4ff7cadf1f06ca01eb852ad71361894a/data/census/DataDict.txt)
+  `DataDict.txt` (<https://raw.github.com/rdhyee/working-open-data/5ef3932b4ff7cadf1f06ca01eb852ad71361894a/data/census/DataDict.txt>)
   into a DataFrame -- send me your notebook by Friday, March 1, 2013 at noon.
   Read the file from github. Hint: if you use requests to read the file, you may
   need to turn verify off for requests.get:
