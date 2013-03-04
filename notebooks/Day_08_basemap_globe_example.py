@@ -34,3 +34,6 @@ cs = map.contour(x,y,wave+mean,15,linewidths=1.5)
 plt.title('contour lines over filled continent background')
 plt.show()
 
+# <codecell>
+
+
