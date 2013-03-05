@@ -106,7 +106,9 @@ data source in the project idea section.
 
 # Work on Projects Today
 
-* Making sure everyone is 
+* Making sure everyone has identified a project.
+* Helping every project identify a a specific data set to start working on and a specific next step.
+* Having project teams talk to each other
 
 # Homework
 
