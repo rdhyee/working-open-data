@@ -4,9 +4,9 @@
 
 # Agenda
 
-# 3 Notebooks today
-
-# Working with Data Sets in PfDA
+* [Time](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_14_date_time.ipynb)
+* [Space](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_14_basemap_redux.ipynb)
+* [Baby Names](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_14_PfDA_starter.ipynb)
 
 
 # Project Proposals due this Friday
