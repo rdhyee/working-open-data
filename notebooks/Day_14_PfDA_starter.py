@@ -223,7 +223,7 @@ assert latest_dt == datetime.datetime(2012, 3, 16, 12, 40, 49)
 
 # Hints:
 # 
-# * compute `netlocs` as a Series, indexed by Network location part (<http://docs.python.org/2/library/urlparse.html>) of `frame.u`, and holding the number of times that netloc occurs in `frame.u`
+# * compute `netlocs` as a Series, indexed by Network location part (<http://docs.python.org/2/library/urlparse.html>) of `frame.u`, and holding the number of times that netloc occurs in `frame.u` and sorted in descending order by that number.
 # * for full marks, you must use a numpy based approach not a classic Python looping approach
 
 # <codecell>
