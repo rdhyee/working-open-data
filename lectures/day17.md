@@ -1,6 +1,6 @@
 % Day 17:  Mid-term Exam
 % Raymond Yee 
-% March 14, 2013 (<http://bit.ly/wwod1316>)
+% March 19, 2013 (<http://bit.ly/wwod1317>)
 
 # Agenda
 
