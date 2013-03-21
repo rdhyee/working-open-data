@@ -9,7 +9,7 @@ concentration to grok.
 
 * [Dave Lester](http://www.davelester.org/meet-dave/) will talk about [Common Crawl](http://commoncrawl.org/) today. 
 
-
+* [Day_18_Common_Crawl](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_18_Common_Crawl.ipynb)
 
 # Homework
 
