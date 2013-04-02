@@ -39,8 +39,14 @@ s = k.get_contents_as_string()
 
 # <codecell>
 
+len(s.split("\n"))
+
+# <codecell>
+
 s.split("\n")
 
 # <codecell>
 
+# what to do with a valid segment instance?
+# https://groups.google.com/forum/#!msg/common-crawl/QYTmnttZZyo/NPiXvK8ZeiMJ
 
