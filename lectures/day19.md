@@ -17,7 +17,7 @@
 * On Day 18, [Dave Lester](http://www.davelester.org/meet-dave/) gave a nice talk about
 [Common Crawl](http://commoncrawl.org/):  http://www.slideshare.net/davelester/introduction-to-common-crawl
 
-* Today, we will work through: [Day_19_CC_etc.ipynb](https://raw.github.com/rdhyee/working-open-data/master/notebooks/Day_19_CC_etc.ipynb)
+* Today, we will work through: [Day_19_CC_etc.ipynb](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_19_CC_etc.ipynb)
  
 # Homework
 
