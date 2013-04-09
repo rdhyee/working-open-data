@@ -27,3 +27,5 @@ def to_picloud_cmd(nb_name, jid):
     scp_to_command =  "scp -q -i {identity} -P {port} {nb_name} {username}@{address}:/home/picloud/notebook/".format(nb_name=nb_name, **cloud.shortcuts.ssh.get_ssh_info(jid))
     return scp_to_command
 
+
+
