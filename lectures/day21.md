@@ -5,7 +5,9 @@
 # Agenda / Homework
 
 * Fill in `segment_status` and run the notebook, showing the number of cores vs time for your run on PiCloud.  Send me
-a URL to a public notebook (rendered in nbviewer.ipython.org).  Due Monday, April 15, 2013 at noon.
+a URL to a public notebook (rendered in nbviewer.ipython.org).  Due Monday, April 15, 2013 at noon. e.g.,
+
+[my notebook in my PiCloud account](https://s3.amazonaws.com/pi-user-buckets/bKkRFJzc0CNIRAkhn6P50MHLmNEqry24er6MOcOI/notebook/Day_21_CommonCrawl_Starter.ipynb)
 
 # Juriscraper Workshop
 
