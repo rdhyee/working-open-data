@@ -4,6 +4,7 @@
 
 # Agenda / Homework
 
+
 * Fill in `segment_status` and run the notebook, showing the number of cores vs time for your run on PiCloud.  Send me
 a URL to a public notebook (rendered in nbviewer.ipython.org).  Due Monday, April 15, 2013 at noon. e.g.,
 
