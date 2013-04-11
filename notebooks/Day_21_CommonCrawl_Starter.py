@@ -320,7 +320,7 @@ valid_segments[0]
 # Prerequisite:  http://docs.picloud.com/primer.html <--- READ THIS AND STUDY TO REFRESH YOUR MEMORY
 
 import cloud
-jid = cloud.call(segment_stats, '1346823845675', None, _env='Working_with_Open_Data')
+jid = cloud.call(segment_stats, '1346823845675', None, _env='/rdhyee/Working_with_Open_Data')
 
 # <codecell>
 
@@ -450,7 +450,7 @@ else:
 # try setting n_tasks to something less than # of all segments to test out code
 n_tasks = len(valid_segments)
 
-jids = CLOUD.map(segment_stats, valid_segments[:n_tasks],  [None]*n_tasks, _env='Working_with_Open_Data')
+jids = CLOUD.map(segment_stats, valid_segments[:n_tasks],  [None]*n_tasks, _env='/rdhyee/Working_with_Open_Data')
 
 # <codecell>
 
