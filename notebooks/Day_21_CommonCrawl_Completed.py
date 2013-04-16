@@ -513,25 +513,6 @@ CLOUD.status(jids)[:5]
 
 # <codecell>
 
-from itertools import izip
-from collections import Counter
-
-file_counter = Counter()
-byte_counter = Counter()
-
-problems = []
-
-for (i, (seg_id, result)) in enumerate(izip(valid_segments[:n_tasks], CLOUD.iresult(jids))):
-    try:
-        file_counter.update(result['count'])
-        byte_counter.update(result['size'])
-        print i, seg_id, byte_counter['arc.gz']
-    except Exception as e:
-        print i, e
-        problems.append((seg_id, e))
-
-# <codecell>
-
 jobs_info = CLOUD.info(jids,
                  info_requested=['created', 'finished', 'runtime', 'cputime']
                  )
