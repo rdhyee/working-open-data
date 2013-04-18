@@ -14,6 +14,8 @@
 
 # For an easy way to post notebooks: use gists. 
 
+[Gists](https://github.com/blog/1276-welcome-to-a-new-gist)
+
 I like Carl's use of gist.github.com to host IPython notebooks --
 they are lightweight, easy to set up, and actually full git repos too. If you do use gists, 
 continue to upload revisions of your notebook to the same gist.  (e.g., <https://gist.github.com/carlshan/5410596/revisions> )
