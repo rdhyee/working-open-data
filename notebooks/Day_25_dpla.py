@@ -1,6 +1,17 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <headingcell level=1>
+
+# From the docs
+
+# <markdowncell>
+
+# http://dp.la/info/developers/codex/ :
+#         
+# * http://api.dp.la/v2 is the base URL of the DPLA API.
+# * **items and collections are the two resource types you can request.**
+
 # <markdowncell>
 
 # launch of dp.la API v2: 
@@ -14,7 +25,26 @@
 
 # <markdowncell>
 
-# Europeana API: http://pro.europeana.eu/api
+# Would be nice to compare to Europeana API: http://pro.europeana.eu/api
+
+# <markdowncell>
+
+# # Use special library to parse json-ld?
+# 
+# 
+# Reading <http://json-ld.org> to get the lowdown on json-ld  Should I use one of the Python libs for json-ld? if so, which one?
+# 
+# OK, I'll try <https://github.com/digitalbazaar/pyld> because it's being actively developed:
+# 
+#     git clone git://github.com/digitalbazaar/pyld.git
+#     cd pyld/
+#     python setup.py install
+# 
+# but I ran into [installation problems](https://github.com/digitalbazaar/pyld/issues/18) -- so I'll let go of looking at json-ld right now.  (There might be a fix: https://github.com/digitalbazaar/pyld/commit/1173af0db20a1a27ba2fcf15bde531c0bf1fca2b )
+
+# <codecell>
+
+# from pyld import jsonld
 
 # <codecell>
 
@@ -53,7 +83,7 @@ def dpla_query(**kw_input):
     # asc vs desc
     
     # available text search fields
-    text_search_fields = ("title", "description", "dplaContributor", "creator", "type", "publisher", "format", "rights", "contributor", "spatial")
+    text_search_fields = ("title", "description", "dplaContributor", "creator", "sourceResource.type", "publisher", "format", "rights", "contributor", "spatial")
     expected_doc_fields = ['title','description', 'creator', 'type', 'publisher', 'format', 'rights', 'contributor', 'created', 'spatial', 'temporal', 'source']
     
     # temporal fields
@@ -66,7 +96,9 @@ def dpla_query(**kw_input):
     
     while more_items:
         
-        r = requests.get("http://api.dp.la/v2/items?" + urllib.urlencode(kwargs))
+        url = "http://api.dp.la/v2/items?" + urllib.urlencode(kwargs)
+        #print url
+        r = requests.get(url)
         content = json.loads(r.content)
         
         if len(content.get("docs", [])):
@@ -80,11 +112,13 @@ def dpla_query(**kw_input):
             more_items = False
 
 
+# <codecell>
+
 # search terms to feed in 
 
 SEARCH_TERMS = ["Bach", "tree", "horse", "cow", "Gore"]
 
-# collections 
+# figure out collections 
 collections = set()
 
 for term in islice(SEARCH_TERMS,1):
@@ -130,15 +164,76 @@ HTML(template.render(num_items=num_items))
 
 # <codecell>
 
-r = dpla_query(q='Bach')
+r = dpla_query(**{'q':'tiger', 'sourceResource.type':'image'})
 
 # <codecell>
 
-r0 = list(islice(r,10))
+r0 = list(islice(r,10))[0]
 
 # <codecell>
 
-r0
+
+
+print "keys", r0[0].keys()
+
+print "count", r0[1]
+print "item_url", "http://dp.la/item/{0}".format(r0[0]['id']) 
+print "id", r0[0]['id']                                                 
+
+# <codecell>
+
+HTML("""<a href="{0}">item</a>""".format("http://dp.la/item/{0}".format(r0[0]['id'])))
+
+# <codecell>
+
+# namespaces 
+r0[0]['@context']
+
+# <codecell>
+
+r0[0]['dataProvider']
+
+# <codecell>
+
+r0[0]['hasView']
+
+# <codecell>
+
+r0[0]['object']
+
+# <codecell>
+
+results = dpla_query(**{'q':'tiger', 'sourceResource.type':'image'})
+items = list([result[0] for result in islice(results,100)])
+
+for item in items:
+    print item.get('object', None)
+
+# <codecell>
+
+results = dpla_query(**{'q':'tiger', 'sourceResource.type':'image'})
+
+items = list([result[0] for result in islice(results,10)])
+
+TABLE_TEMPLATE = """
+ {% for item in items %}
+<img src="{{item.object}}"/>
+ {% endfor %}
+"""
+    
+template = Template(TABLE_TEMPLATE)
+HTML(template.render(items=items)) 
+
+# <headingcell level=1>
+
+# Rights challenge
+
+# <codecell>
+
+results = dpla_query(**{'q':'tiger', 'sourceResource.type':'image'})
+
+for result in islice(results,10):
+    print result[0]['sourceResource'].get('rights')
 
 # <codecell>
 
