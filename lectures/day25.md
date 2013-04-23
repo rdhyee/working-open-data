@@ -50,7 +50,7 @@ and then work iteratively to improve that work. I
 love to see you accomplish big ambitious goal but I want you to work reach those goals as a series of concrete,
 probably modest steps.
 
-Keep your section of bit.ly/wwod13projideas up-to-date --i.e, delete stuff that's no longer true.
+Keep your section of http://bit.ly/wwod13projideas up-to-date --i.e, delete stuff that's no longer true.
 
 # Homework
 
