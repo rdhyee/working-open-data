@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
-# <codecell>
-
-
 # <markdowncell>
 
 # # A quick jump into the API of opencontext.org
 # 
 # Let's use a specific project to focus on:
 # 
-# * http://opencontext.org/sets/?proj=Asian+Stoneware+Jars
-# * http://opencontext.org/lightbox/?proj=Asian+Stoneware+Jars
+# * <http://opencontext.org/sets/?proj=Asian+Stoneware+Jars>
+# * <http://opencontext.org/lightbox/?proj=Asian+Stoneware+Jars>
 # 
 # 
-# The API documentation: http://opencontext.org/about/services
+# The API documentation: <http://opencontext.org/about/services>
 
 # <codecell>
 
