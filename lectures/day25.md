@@ -45,7 +45,7 @@ and [photos from 2006 MRI Open House](http://www.flickr.com/photos/raymondyee/se
 
 I'm looking for concrete code in IPython notebook. It's better to start with one
 specific data set with some analytical code from which you then expand
-than generalities aboutabout work you hope to accomplish.  In other words, consolidate and present what you have
+than generalities about work you hope to accomplish.  In other words, consolidate and present what you have
 and then work iteratively to improve that work. I
 love to see you accomplish big ambitious goal but I want you to work reach those goals as a series of concrete,
 probably modest steps.
