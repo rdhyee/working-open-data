@@ -1,4 +1,4 @@
-% Day 25:  Guest Speaker:  Eric Kansa on Open Context
+% Day 26:  Guest Speaker:  Eric Kansa on Open Context
 % Raymond Yee 
 % April 25, 2013  (<http://bit.ly/wwod1326>)
 
@@ -41,7 +41,9 @@ In preparation for his talk, please read:
 I will be advertising the Open House for the course at the end of this week. Please
 provide me a title and a short blurb (minimally, 75 words and not more 150 words)
 describing your project that I can use to advertise your work by **tomorrow**: **Friday,
-April 26, 2013 at noon PDT**.
+April 26, 2013 at noon PDT**.  Include a URL that points to where people will be able to find your completed IPython notebook.
+Please get your notebooks in (more or less) final presentable form by Monday May 6, 2013 noon.
+(You can start with a placeholder notebook with your abstract.)
 
 Place your project abstract at
 [Abstracts](https://docs.google.com/a/berkeley.edu/document/d/1ZMZcai8k5YA-_re_ZWhdQFwTk0xmTbQP0UIaDlb72lE/edit#bookmark=id.zebdssfr8vuy)
