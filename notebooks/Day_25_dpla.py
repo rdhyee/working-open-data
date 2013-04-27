@@ -235,6 +235,14 @@ results = dpla_query(**{'q':'tiger', 'sourceResource.type':'image'})
 for result in islice(results,10):
     print result[0]['sourceResource'].get('rights')
 
+# <headingcell level=1>
+
+# Follow-up
+
+# <markdowncell>
+
+# Revise my code to get reliable access to object URI: http://dp.la/info/forums/topic/how-to-reliably-find-url-for-returned-object-in-api/#post-8327
+
 # <codecell>
 
 
