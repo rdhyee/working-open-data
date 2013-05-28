@@ -89,7 +89,7 @@ and other data sets still to be determined, probably large open scientific data 
 
 # Course Outline
 
-**Last revised: 2013.02.20**
+**Last revised: 2013.05.27**
 
   1. [Day 1: Introduction to Working with Open Data](http://bit.ly/wwod1301)
   2. [Day 2: Review of Python and iPython (Chap 3 and Chap 13)](http://bit.ly/wwod1302)
@@ -100,6 +100,37 @@ and other data sets still to be determined, probably large open scientific data 
   7. [Day 7: Preparing for Courtlistener / Branching out to the Wikipedia, Freebase / Projects...](http://bit.ly/wwod1307)
   8. [Day 8: Courtlistener](http://bit.ly/wwod1308)
   9. [Day 9: Reflection: Courtlistener, Homework, Projects, Knight Challenge](http://bit.ly/wwod1309)
+  10. [Day 10:  Pip, Fixed Column Data, Freebase](http://bit.ly/wwod1310)
+  11. [Day 11: Project Proposals and Pandas!](http://bit.ly/wwod1311)
+  12. [Day 12:  UC Data Lab and Data for our projects](http://bit.ly/wwod1312)
+  13. [Day 13:  Project Proposals and Continuing to Learn PfDA](http://bit.ly/wwod1313)
+  14. [Day 14:  Time, Space, and Baby Names](http://bit.ly/wwod1314)
+  15. [Day 15:  Midterm Preparation / Cloud Computing Teaser / Study Hall](http://bit.ly/wwod1315)
+  16. [Day 16:  PiCloud / AWS / CommonCrawl](http://bit.ly/wwod1316)
+  17. [Day 17:  Mid-term Exam](http://bit.ly/wwod1317)
+  18. [Day 18:  CommonCrawl](http://bit.ly/wwod1318)
+  19. [Day 19:  PiCloud, CommonCrawl revisited, Projects](http://bit.ly/wwod1319)
+  20. [Day 20:  Guest Speaker:  Fernando Perez](http://bit.ly/wwod1320)
+  21. [Day 21:  The last stretch](http://bit.ly/wwod1321) 
+  22. [Day 22:  Finishing up PiCloud work and preview of Juriscraper workshop](http://bit.ly/wwod1322)  
+  23. [Day 23:  Projects](http://bit.ly/wwod1323)
+  24. [Day 24:  Projects II](http://bit.ly/wwod1324)
+  25. [Day 25:  Projects III](http://bit.ly/wwod1325)
+  26. [Day 26:  Guest Speaker:  Eric Kansa on Open Context](http://bit.ly/wwod1326)
+  27. [Day 27:  Project Presentations I](http://bit.ly/wwod1327)  
+  28. [Day 28:  Project Presentations II](http://bit.ly/wwod1328)
+  29. [Day 29:  Open Data Project Exhibit](http://bit.ly/wwod1329)
+  
+Old plans:
+
+  2. Review of Python & iPython (Chap 3 and Chap 13) + setup EPD
+  3. NumPy and Getting started with pandas I (Chap 4, 5)
+  4. Open Government Data I:  US Census data: introduction how to work with
+  5. Plotting and Visualization (Chap 8)
+  6. Data Loading, Storage, and File Formats (Chap 6)
+  7. Wikipedia:  API, data structure
+  8. NumPy and Getting started with pandas II (Chap 4, 5)
+  9. Freebase, dbpedia, wikidata
   10. Data Wrangling: Clean, Transform, Merge, Reshape (Chap 7)
   11. working with geodata I
   12. JavaScript-based visualization I
@@ -118,18 +149,7 @@ and other data sets still to be determined, probably large open scientific data 
   25. Advanced NumPy (Ch 12)  
   26. PyData Misc I / Working on Projects  
   27. PyData Misc II / Working on Projects  
-  28. Project Poster Session
-  
-Old plans:
-
-  2. Review of Python & iPython (Chap 3 and Chap 13) + setup EPD
-  3. NumPy and Getting started with pandas I (Chap 4, 5)
-  4. Open Government Data I:  US Census data: introduction how to work with
-  5. Plotting and Visualization (Chap 8)
-  6. Data Loading, Storage, and File Formats (Chap 6)
-  7. Wikipedia:  API, data structure
-  8. NumPy and Getting started with pandas II (Chap 4, 5)
-  9. Freebase, dbpedia, wikidata
+  28. Project Poster Session  
 
 ## To be scheduled:
 

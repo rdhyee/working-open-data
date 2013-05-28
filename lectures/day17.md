@@ -4,7 +4,7 @@
 
 # Agenda
 
-* Mid-term
+* Mid-term: [Midterm with Key](http://nbviewer.ipython.org/urls/raw.github.com/rdhyee/working-open-data/master/notebooks/Day_17_Midterm_with_Key.ipynb)
 
 # Homework
 
