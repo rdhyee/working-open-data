@@ -7,13 +7,13 @@
 
 # <markdowncell>
 
-# We will be working with [Freebase][http://dev.freebase.com] and [OpenRefine](http://openrefine.org/) throughout the semester.  Today, I wanted to get us set up with using the API -- the goal today is simply for all of you to go get a Google API key and configure 
+# We will be working with [Freebase](http://dev.freebase.com) and [OpenRefine](http://openrefine.org/) throughout the semester.  Today, I wanted to get us set up with using the API -- the goal today is simply for all of you to go get a Google API key and configure 
 
 # <markdowncell>
 
 # Follow instructions at
 # 
-# http://wiki.freebase.com/wiki/Freebase_API#Getting_Started
+# [Freebase API — Google Developers](https://developers.google.com/freebase/)
 # 
 # to get a key.  You may need to go to the Services section at https://code.google.com/apis/console/b/0/ to make sure Freebase access is turned on:
 # 
@@ -66,6 +66,29 @@ assert planets == [u'Earth',
  u'Neptune',
  u'Saturn',
  u'Uranus']
+
+# <codecell>
+
+# 2014.01.16
+# https://groups.google.com/d/msg/freebase-discuss/3fGxZMSkWyY/gHxTCgagxs8J
+# https://developers.google.com/freebase/v1/mql-overview#mqlwrite-overview
+
+from CREDENTIALS import FREEBASE_KEY
+
+import json
+import urllib
+
+api_key = FREEBASE_KEY
+service_url = 'https://www.googleapis.com/freebase/v1/mqlread'
+query = [{'id': None, 'name': None, 'type': '/astronomy/planet'}]
+params = {
+        'query': json.dumps(query),
+        'key': api_key
+}
+url = service_url + '?' + urllib.urlencode(params)
+response = json.loads(urllib.urlopen(url).read())
+for planet in response['result']:
+  print planet['name']
 
 # <headingcell level=1>
 

@@ -47,6 +47,7 @@ def triangle():
 
 # hint list(islice([0,1,2,3,4], 2))  is [0,1]
 
+from itertools import islice
 f = triangle()
 list(islice(f,4))
 

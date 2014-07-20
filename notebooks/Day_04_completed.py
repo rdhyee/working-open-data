@@ -40,6 +40,10 @@
 
 # <codecell>
 
+%pylab inline
+
+# <codecell>
+
 # using loop
 
 n = 100
@@ -294,7 +298,7 @@ from pandas import Series, DataFrame
 
 # zero-dimensions
 
-a0 = array(5)
+a0 = np.array(5)
 a0
 
 # <markdowncell>
@@ -308,14 +312,14 @@ a0.ndim, a0.shape
 # <codecell>
 
 # 1-d array
-a1 = array([1,2])
+a1 = np.array([1,2])
 a1.ndim, a1.shape
 
 # <codecell>
 
 # 2-d array
 
-a2 = array(([1,2], [3,4]))
+a2 = np.array(([1,2], [3,4]))
 a2.ndim, a2.shape
 
 # <headingcell level=2>
@@ -908,12 +912,32 @@ fips_df2.ix['00000']
 
 # <codecell>
 
-# first 5 rows
-fips_df2[Series(fips_df2.index).str[-3:] == '000'][:5]
+bool_index = Series(fips_df2.index).str[-3:] == '000'
 
 # <codecell>
 
-len(fips_df2[Series(fips_df2.index).str[-3:] == '000'])
+Series(fips_df2.index,index=fips_df2.index).str[-3:] == '000'
+
+# <codecell>
+
+bool_index.index
+
+# <codecell>
+
+fips_df2.index
+
+# <codecell>
+
+Series(fips_df2.index).str[-3:] == '000'
+
+# <codecell>
+
+# first 5 rows
+fips_df2[Series(fips_df2.index, index=fips_df2.index).str[-3:] == '000'][:5]
+
+# <codecell>
+
+len(fips_df2[Series(fips_df2.index, index=fips_df2.index).str[-3:] == '000'])
 
 # <codecell>
 

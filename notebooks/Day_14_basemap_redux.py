@@ -14,13 +14,17 @@
 
 # <codecell>
 
+%pylab inline
+
+# <codecell>
+
 # http://matplotlib.org/basemap/users/examples.html
 
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np
 
-# set up orthographic map projection with
+# set up orthographic (ortho) map projection with
 # perspective of satellite looking down at 50N, 100W.
 # use low resolution coastlines.
 map = Basemap(projection='ortho',lat_0=50,lon_0=-100,resolution='l')
@@ -331,7 +335,6 @@ plt.show()
 # <codecell>
 
 # https://github.com/matplotlib/basemap/blob/master/examples/fillstates.py
-
 
 
 import zipfile

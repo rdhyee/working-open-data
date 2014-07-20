@@ -36,4 +36,5 @@ plt.show()
 
 # <codecell>
 
+print 2
 

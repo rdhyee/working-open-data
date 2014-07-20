@@ -108,7 +108,7 @@ fips_df["fips_prefix"] = fips_df.fips.str[:2]
 # <codecell>
 
 # TEST
-
+import numpy as np
 assert np.all(fips_df[fips_df.fips == '00000']['fips_prefix'] == '00')
 assert np.all(fips_df[fips_df.fips == '06000']['fips_prefix'] == '06')
 assert np.all(fips_df[fips_df.fips == '06001']['fips_prefix'] == '06')

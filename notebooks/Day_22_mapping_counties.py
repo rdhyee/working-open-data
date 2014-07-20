@@ -30,6 +30,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import warnings
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore")
@@ -52,6 +53,7 @@ print basemap_data_dir, os.path.exists(os.path.join(basemap_data_dir,"UScounties
 # <codecell>
 
 # https://code.google.com/p/pyshp/
+# pip install pyshp
 import shapefile
  
 # this is my git clone of https://github.com/matplotlib/basemap --> these files will be in the PiCloud basemap_data_dir
