@@ -60,22 +60,6 @@
 
 # <codecell>
 
-# this key, secret access to aws-publicdatasets only -- created for WwOD 13 student usage
-
-# turns out there is an anonymous mode in boto for public data sets:
-# https://github.com/keiw/common_crawl_index/commit/ad341d0a41a828f260c9c08419dadff0dac6cf5b#L0R33
-#  conn=S3Connection(anon=True) will work instead of conn= S3Connection(KEY, SECRET) -- but there seems to be 
-# a bug in how S3Connection gets pickled for anon=True -- so for now, just use the KEY, SECRET
-
-KEY = 'AKIAJH2FD7572FCTVSSQ'
-SECRET = '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'
-
-# <markdowncell>
-
-# You can use this key/secret pair to configure both `boto` and `s3cmd`
-
-# <codecell>
-
 # s3cmd installed in custom PiCloud environment -- and maybe in your local environment too
 
 # confirm s3://aws-publicdatasets/common-crawl/crawl-002/2010/01/06/10/1262847572760_10.arc.gz
@@ -144,7 +128,7 @@ from boto.s3.connection import S3Connection
 
 from itertools import islice
 
-conn = S3Connection(KEY,SECRET)
+conn = S3Connection()
 
 # turns out there is an anonymous mode in boto for public data sets:
 # https://github.com/keiw/common_crawl_index/commit/ad341d0a41a828f260c9c08419dadff0dac6cf5b#L0R33
@@ -162,7 +146,7 @@ for key in islice(bucket.list(prefix="common-crawl/parse-output/", delimiter="/"
 import boto
 from boto.s3.connection import S3Connection
 
-conn = S3Connection(KEY, SECRET)
+conn = S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 
 k = bucket.get_key("common-crawl/parse-output/valid_segments.txt")
@@ -232,7 +216,7 @@ from itertools import islice
 import boto
 from boto.s3.connection import S3Connection
 
-conn = S3Connection(KEY, SECRET)
+conn = S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 for key in islice(bucket.list(prefix="common-crawl/parse-output/segment/1346823845675/", delimiter="/"),10):
     print key.name.encode('utf-8')
@@ -261,14 +245,10 @@ type(file0), file0.name, file0.size
 import boto
 from boto.s3.connection import S3Connection
 
-# this key, secret access to aws-publicdatasets only -- createdd for WwOD 13 student usage
-KEY = 'AKIAJH2FD7572FCTVSSQ'
-SECRET = '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'
-
 from itertools import islice
 from pandas import DataFrame
 
-conn= S3Connection(KEY, SECRET)
+conn= S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 
 # you might find this conversion function between DataFrame and a list of a regular dict useful
@@ -333,39 +313,87 @@ valid_segments[0]
 
 %time segment_stats(valid_segments[0], None)
 
+# <headingcell level=1>
+
+# Rewrite to use multyvac instead of picloud
+
 # <codecell>
 
-# here's how to run it on PiCloud
-# Prerequisite:  http://docs.picloud.com/primer.html <--- READ THIS AND STUDY TO REFRESH YOUR MEMORY
+import multyvac
+jid = multyvac.submit(segment_stats, '1346823845675', _layer='numpy2')
+jid
 
-import cloud
-jid = cloud.call(segment_stats, '1346823845675', None, _env='/rdhyee/Working_with_Open_Data')
+# <codecell>
+
+job = multyvac.get(jid)
+job.get_result()
 
 # <codecell>
 
 # pull up status -- refresh until done
-cloud.status(jid)
+job.status
 
 # <codecell>
 
 # this will block until job is done or errors out
-
-cloud.join(jid)
+job.wait()
+#cloud.join(jid)
 
 # <codecell>
 
 # get your result
-cloud.result(jid)
+#cloud.result(jid)
+
+job.get_result()
 
 # <codecell>
 
-# get some basic info
-cloud.info(jid)
+# get useful info about job
+# http://docs.multyvac.com/primer_python.html#more-attributes
+
+[attr_ for attr_ in dir(job) if not attr_.startswith("_")]
+
+# <codecell>
+
+(job.created_at, job.finished_at, job.runtime, job.cputime_system, job.cputime_user)
 
 # <codecell>
 
 # get some specific info
-cloud.info(jid, info_requested=['created', 'finished', 'runtime', 'cputime'])
+# cloud.info(jid, info_requested=['created', 'finished', 'runtime', 'cputime'])
+
+# <headingcell level=1>
+
+# Writing code to submit a series of jobs
+
+# <codecell>
+
+import time, datetime
+datetime.datetime.now().isoformat()
+
+# <codecell>
+
+import uuid
+from itertools import islice
+
+import multyvac
+
+segments_to_calculate = list(islice(valid_segments,2))
+job_name = uuid.uuid4().hex
+
+segments_to_calculate
+job_ids = [multyvac.submit(segment_stats, seg_id,
+                           _name=job_name, _layer='numpy2',
+                           _tags={'f':'segment_stats', 'args':seg_id}) for seg_id in \
+           segments_to_calculate]
+
+job_ids
+
+# <codecell>
+
+# let's get the results
+
+multyvac.list(name=job_name)
 
 # <headingcell level=1>
 

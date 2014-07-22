@@ -11,18 +11,6 @@
 
 # <codecell>
 
-# this key, secret access to aws-publicdatasets only -- created for WwOD 13 student usage
-
-# turns out there is an anonymous mode in boto for public data sets:
-# https://github.com/keiw/common_crawl_index/commit/ad341d0a41a828f260c9c08419dadff0dac6cf5b#L0R33
-#  conn=S3Connection(anon=True) will work instead of conn= S3Connection(KEY, SECRET) -- but there seems to be 
-# a bug in how S3Connection gets pickled for anon=True -- so for now, just use the KEY, SECRET
-
-KEY = 'AKIAJH2FD7572FCTVSSQ'
-SECRET = '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'
-
-# <codecell>
-
 # http://boto.s3.amazonaws.com/s3_tut.html
 
 import boto
@@ -30,7 +18,7 @@ from boto.s3.connection import S3Connection
 
 from itertools import islice
 
-conn = S3Connection(KEY,SECRET)
+conn = S3Connection()
 
 # turns out there is an anonymous mode in boto for public data sets:
 # https://github.com/keiw/common_crawl_index/commit/ad341d0a41a828f260c9c08419dadff0dac6cf5b#L0R33
@@ -236,4 +224,7 @@ for (i, (pos, k, v)) in enumerate(islice(SequenceFileIterator(path), 1)):
     print i, k, archiveInfo
     print "metadata available:", v.keys()
     
+
+# <codecell>
+
 

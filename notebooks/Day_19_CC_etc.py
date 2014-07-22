@@ -3,22 +3,11 @@
 
 # <headingcell level=1>
 
-# Optional:  get PiCloud, s3cmd, boto set up locally
+# Optional:  get s3cmd, boto set up locally
 
 # <markdowncell>
 
 # I have `s3cmd` and `boto` set up on PiCloud's `/rdhyee/Working_with_Open_Data` environment set up.  
-
-# <headingcell level=2>
-
-# local PiCloud installation
-
-# <markdowncell>
-
-# 
-#     sudo pip install cloud
-# 
-#     picloud setup
 
 # <headingcell level=2>
 
@@ -54,17 +43,6 @@
 
 # <codecell>
 
-# import our library
-import cloud
-
-# <codecell>
-
-# this key, secret access to aws-publicdatasets only -- createdd for WwOD 13 student usage
-KEY = 'AKIAJH2FD7572FCTVSSQ'
-SECRET = '8dVCRIWhboKMiJxgs1exIh6eMCG13B+gp/bf5bsl'
-
-# <codecell>
-
 # s3cmd installed in custom PiCloud environment -- and maybe in your local environment too
 
 !s3cmd ls s3://aws-publicdatasets/common-crawl/parse-output/valid_segments.txt
@@ -82,7 +60,7 @@ from boto.s3.connection import S3Connection
 
 from itertools import islice
 
-conn = S3Connection(KEY,SECRET)
+conn = S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 for key in islice(bucket.list(prefix="common-crawl/parse-output/", delimiter="/"),None):
     print key.name.encode('utf-8')
@@ -95,7 +73,7 @@ for key in islice(bucket.list(prefix="common-crawl/parse-output/", delimiter="/"
 import boto
 from boto.s3.connection import S3Connection
 
-conn = S3Connection(KEY,SECRET)
+conn = S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 
 k = bucket.get_key("common-crawl/parse-output/valid_segments.txt")
@@ -129,7 +107,7 @@ valid_segments[0]
 
 from itertools import islice
 
-conn = S3Connection(KEY,SECRET)
+conn = S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 for key in islice(bucket.list(prefix="common-crawl/parse-output/segment/1346823845675/", delimiter="/"),10):
     print key.name.encode('utf-8')
