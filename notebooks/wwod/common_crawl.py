@@ -19,10 +19,8 @@ import cloud
 #  conn=S3Connection(anon=True) will work instead of conn= S3Connection(KEY, SECRET) -- but there seems to be 
 # a bug in how S3Connection gets pickled for anon=True -- so for now, just use the KEY, SECRET
 
-KEY = 'AKIAJH2FD7572FCTVSSQ'
-SECRET = '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'
 
-conn = S3Connection(KEY, SECRET)
+conn = S3Connection()
 bucket = conn.get_bucket('aws-publicdatasets')
 
 def SequenceFileIterator(path):

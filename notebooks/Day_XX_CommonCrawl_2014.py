@@ -128,7 +128,7 @@ valid_segments[:5]
 
 # <headingcell level=1>
 
-# WET:  metadata files
+# WAT:  metadata files
 
 # <markdowncell>
 
@@ -288,15 +288,190 @@ url
 
 # <codecell>
 
-!wget $url
+wat_segments[0]
 
 # <codecell>
 
-!mv CC-MAIN-20140416005201-00000-ip-10-147-4-33.ec2.internal.warc.wat.gz\?versionId\=null CC-MAIN-20140416005201-00000-ip-10-147-4-33.ec2.internal.warc.wat.gz
+# looks like within any segment ID, we should expect warc, wat, wet buckets
+
+!s3cmd ls s3://aws-publicdatasets/common-crawl/crawl-data/CC-MAIN-2014-15/segments/1397609521512.15/
 
 # <codecell>
 
-!head CC-MAIN-20140416005201-00000-ip-10-147-4-33.ec2.internal.warc.wat
+import boto
+from itertools import islice
+from boto.s3.key import Key
+from gzipstream import GzipStreamFile
+import warc
+import json
+
+
+def test_gzipstream():
+
+  output = []
+    
+  # Let's use a random gzipped web archive (WARC) file from the 2014-15 Common Crawl dataset
+  ## Connect to Amazon S3 using anonymous credentials
+  conn = boto.connect_s3(anon=True)
+  pds = conn.get_bucket('aws-publicdatasets')
+  ## Start a connection to one of the WARC files
+  k = Key(pds)
+  k.key = 'common-crawl/crawl-data/CC-MAIN-2014-15/segments/1397609521512.15/warc/CC-MAIN-20140416005201-00000-ip-10-147-4-33.ec2.internal.warc.gz'
+
+  # The warc library accepts file like objects, so let's use GzipStreamFile
+  f = warc.WARCFile(fileobj=GzipStreamFile(k))
+  for num, record in islice(enumerate(f),100):
+    if record['WARC-Type'] == 'response':
+      # Imagine we're interested in the URL, the length of content, and any Content-Type strings in there
+      output.append((record['WARC-Target-URI'], record['Content-Length']))
+      output.append( '\n'.join(x for x in record.payload.read().replace('\r', '').split('\n\n')[0].split('\n') if 'content-type:' in x.lower()))
+      output.append( '=-=-' * 10)
+ 
+  return output
+        
+
+# <codecell>
+
+def warc_records(key_name, limit=None):
+    conn = boto.connect_s3(anon=True)
+    bucket = conn.get_bucket('aws-publicdatasets')
+    key = bucket.get_key(key_name)
+
+    # The warc library accepts file like objects, so let's use GzipStreamFile
+    f = warc.WARCFile(fileobj=GzipStreamFile(key))
+    for record in islice(f, limit):
+        yield record
+
+# <codecell>
+
+# let's compute some stats on the headers
+from collections import Counter
+c=Counter()
+[c.update(record.header.keys()) for record in warc_records(wat_segments[0],100)]
+c
+
+# <codecell>
+
+# warc-type
+
+# looks like 
+# first record is 'warcinfo
+# rest is 'metadata'
+
+c=Counter()
+[c.update([record['warc-type']]) for record in warc_records(wat_segments[0],100)]
+
+c
+
+# <codecell>
+
+# content-type
+
+c=Counter()
+[c.update([record['content-type']]) for record in warc_records(wat_segments[0],100)]
+
+c
+
+# <codecell>
+
+# what
+
+# <codecell>
+
+wrecords = warc_records(wat_segments[0])
+
+# <codecell>
+
+record = wrecords.next()
+
+# <codecell>
+
+# http://warc.readthedocs.org/en/latest/#working-with-warc-header
+
+record.header.items()
+
+# <codecell>
+
+#payload
+dir(record.payload)
+
+# <codecell>
+
+record.header.get('content-type')
+
+# <codecell>
+
+# payload
+
+
+s = record.payload.read()
+len(s)
+
+# <codecell>
+
+if record.header.get('content-type') == 'application/json':
+    payload = json.loads(s)
+else:
+    payload = s
+    
+payload
+
+# <codecell>
+
+payload['Envelope']['WARC-Header-Metadata']['WARC-Target-URI']
+
+# <codecell>
+
+import urlparse
+urlparse.urlparse(payload['Envelope']['WARC-Header-Metadata']['WARC-Target-URI']).netloc
+
+# <codecell>
+
+import urlparse
+
+def netloc_count_for_segment(segment_id, limit=None):
+    
+    c = Counter()
+
+    for record in warc_records(segment_id,limit):
+
+        s = record.payload.read()
+        if record.header.get('content-type') == 'application/json':
+            payload = json.loads(s)
+            url = payload['Envelope']['WARC-Header-Metadata'].get('WARC-Target-URI')
+            if url:
+                netloc = urlparse.urlparse(url).netloc
+                c.update([netloc])
+            else:
+                c.update([None])
+
+    return c
+
+
+        
+
+# <codecell>
+
+%time netloc_count_for_segment(wat_segments[0],100000)
+
+# <codecell>
+
+import multyvac
+jid = multyvac.submit(netloc_count_for_segment, wat_segments[0],150000,_core='c1', _name="wat_seg:0, 150000, c1; new gzipstream")
+jid
+
+# <codecell>
+
+job = multyvac.get(jid)
+job
+
+# <codecell>
+
+job.status
+
+# <codecell>
+
+job.get_result()
 
 # <headingcell level=1>
 
